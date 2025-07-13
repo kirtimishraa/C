@@ -1,2 +1,2 @@
-# Notes
-C/CPP Notes
+# C
+C Learning
