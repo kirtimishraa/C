@@ -1,3 +1,11 @@
+Naming conventions:
+
+- Variable: small_snake_case
+- Const varible: CAPITAL_SNAKE_CASE
+- Function name: camelCase
+- Class: CapitalizeCase
+- Object: camelCase
+
 Operators:
 +,-,*,/
 %: Modulus: Reminder of the division between two operands.
@@ -57,8 +65,6 @@ Storage Place "Ram"; Default value: 0; Scope: Local; Lifetime: Till end of the m
 Automatoc; auto
 Storage Place "Register"; Default value: Garbage; Scope: Local; Lifetime: Within function;
 Faster, but We can not access the address of register variable ofcourse registers don't have memory addresses
-
-
 
 
 constant:

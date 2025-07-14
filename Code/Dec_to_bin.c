@@ -1,32 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int bin, N, rem, rem2;
-    printf("Enter any number: \n");
+    int N, rem, reverse, temp=1;
+    printf("Enter a number for which you want binary: \n");
     scanf("%d", &N);
-    while(rem!=0){
 
-        N = N/2;
-        rem = N%2;
-    }
-    for(;rem!=0; rem=rem/10)
+    while(N!=0)
     {
-        rem2=rem%10;
-        bin=10*bin+rem2;
-
-    printf("Binary of your entered decimal number is: ", bin);
+        rem=N%2;
+        reverse=rem*temp+reverse;
+        temp = temp*10;
+        N=N/2;
     }
-
+    printf("The binary of Entered Number is: %d", reverse);
 }
-
-
-
-
-
-
-
-
-
-
-
-
