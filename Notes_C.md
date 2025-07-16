@@ -1,3 +1,19 @@
+Cloning new git repo:
+git  clone  git@github.com:kirtimishraa/C.git
+
+
+Add changes to git staging (to commit):
+git   add  file/folder-name
+
+
+Commit changes (saving changes but local only):
+git  commit  -m  "cimmit_message"
+
+Uploading changes to github remote:
+git  push
+
+
+
 Naming conventions:
 
 - Variable: small_snake_case
@@ -49,6 +65,7 @@ Format specifier: Holds the space for specific Type
 %ld		: To print long signed integer
 %%		: To print % character itself
 %llu	: To print large unsigned integer
+
 
 Storage Classes in C: Storage classes in C are used to determine the lifetime, visiblity, memory location, and initial value of variable, 
 
@@ -121,7 +138,7 @@ LOOP:
 1. do-while Loop
 do{
 
-}while(condition);
+}while(condition); 		// 	To use when its not fixed iterations, need we need multiple initialization etc
 
 2. While loop
 while(condition){
@@ -362,10 +379,12 @@ int *ptr=0;
 String:
 String is sequence of character terminated by NULL "\0" character
 
+Omttinhg the length:
+char s[] = "Hello"; //Automatically it'll compile the 6 characters and 1 null character i.e size of 7 
+
 1. initialization using character array
 	1. chara[] = "Hello";
 	2. char b[]={'H','e','l','l',''};
-
 
 Invalid:
 	1. If we made string using character array then we can't initialize them again
@@ -557,9 +576,6 @@ fun(int p[]) or
 fun(intp[3])  		#Any of them would be fine but internally it will be internal pointer
 
 
-
-
-
 - Reverse of integer
 - Prime number of size n
 - Count lower chars in given string and return its total count
@@ -570,7 +586,6 @@ fun(intp[3])  		#Any of them would be fine but internally it will be internal po
 - armstrong number
 - factor of number
 - sort array with min loop
-
 
 
 
