@@ -356,7 +356,7 @@ But after the close bracket, scope of x get finished and now pointer is pointing
 3. void *pointer:
  void pointer can point to any data type we declare the pointer with void and later, use it by adding typecasting front of pointer for the specific statement
  void *ptr
- Typecasting Syntax: *(datatype)ptr #its explicit typecasting
+ Typecasting Syntax: *(datatype*)ptr #its explicit typecasting
  Use: printf("format", *(data type*)ptr)
 
  Ex:
@@ -462,7 +462,6 @@ char name[3][17]={"Pankaj", "VishwasRaoSwami", "Balguruswami ji"};
   printf("%s", *(p+1)); OR printf("%s", p[1]) 
 
 
-
 Function():
 May or may not contain argument And may and may not Return valye
 Declaration: Compliler: 
@@ -517,7 +516,7 @@ Arguments are evaluate
 Pascal: Left to Right
 C: Right to left
 
-Parameter Paasing:
+Parameter Passing:
 1. Call by Value: Values are passes as argument; 
 ->In call by value, different memory is allocated for actual and formal parameters 
 -> It doesn't affect on actual code because it sends the copy of value not actual value 
@@ -532,7 +531,7 @@ function def: DT Fun_Name(DT*args1, DT*args2)
 
 =>Pointer to function:
 
-Not calling function() directly calling function using pointer because its much efficient 
+Not calling function() directly; calling function using pointer because its much efficient 
 
 Ex:
 int Add(int, int);
@@ -560,20 +559,20 @@ return0;
 
 
 Passing array as argument:
-Passing array means passing address because array is always an address, 
-so in Function defination always interbally its pointer even we're passing formal argument as an array
+Passing array as an argument means passing address because array is always an address, 
+so in Function defination always internally its pointer even we're passing formal argument as an array
 
 Ex:
 void main()
 {
-	inta[3] = {10, 20, 30};
+	int a[3] = {10, 20, 30};
 	fun(a);
 }
 In Defination we can write 
 
 fun(int*p) or
 fun(int p[]) or
-fun(intp[3])  		#Any of them would be fine but internally it will be internal pointer
+fun(int p[3])  		#Any of them would be fine but internally it will be internal pointer
 
 
 - Reverse of integer
@@ -586,6 +585,16 @@ fun(intp[3])  		#Any of them would be fine but internally it will be internal po
 - armstrong number
 - factor of number
 - sort array with min loop
+
+
+- Make program to calculate average of array numbers of size 5
+
+Do it as:
+- take array input in main function
+- create custom function avg() that calculate and return average of array elements
+- them print that average in main function
+
+Concept to use: pointer, array, function
 
 
 
