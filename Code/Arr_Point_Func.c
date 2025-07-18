@@ -10,7 +10,6 @@ float func(int *N, int n)
     return fun_avg;
 }
 
-
 int main(){
     int N[100], n; float sum=0, avg;
     printf("Enter for how many Number you want to calculate Average:\n");
