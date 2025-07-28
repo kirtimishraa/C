@@ -59,13 +59,13 @@ int main()
     printf("Enter the Second Number: \n");
     scanf("%f", &b);
     
-    float (*Ptr[BinOps])(float, float) = {add, sub, mul, div};
+    float (*Ptr[BinOps])(float, float) = {add, sub, mul, div};                 //Created an array [4]of pointer to take the address of each function respectively
     printf("The result of selected operation is: %.3f", Ptr[choice](a, b));
     }
 
     if(choice>=4)                                                              //if its one digit operation
     {       
-        float(*ptr2[unOps])(float) = {square, square_root, cube, cube_root, factorial};
+        float(*ptr2[unOps])(float) = {square, square_root, cube, cube_root, factorial};     //Created array [5] of pointer to take the address of func respe...
         printf("The result of selected operation is: %.3f", ptr2[choice-4](a)); //As we want function indexing start from 4 not 0 by default, so if user enters 5 for square root it's 5-4=1 and then second element of array function which is square root
     }
 
