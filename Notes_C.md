@@ -131,7 +131,8 @@ data type (3rd priority)
 C Switch Statement: Alternate to the if-else-if ladder statement; Swich allows us to execute multiple operations.
 Syntax:
 
-switch(expression){
+switch(expression)
+{
 case Value1:
 	//code to be executed
 break;	//optional
