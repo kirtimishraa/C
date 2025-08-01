@@ -2,35 +2,43 @@
 #include<math.h>
 
 float add(float a, float b){        //For Addition
-    return a+b;
+    float res = a+b;
+    return res;
 }
 
 float sub(float a, float b){        //For Subtraction 
-    return a-b;
+    float res = a-b;
+    return res;
 }
 
 float mul(float a, float b){        //For Multiplication
-    return a*b;
+    float res = a*b;
+    return res;
 }
 
 float div(float a, float b){        //For division
-    return a/b;
+   float res = a/b;
+   return res;
 }
 
 float square(float a){              //For Square
-    return pow(a, 2);
+    float res = pow(a, 2);
+    return res;
 }
 
 float square_root(float a){         //For Square root
-      return sqrt(a);
+      float res = sqrt(a);
+      return res;
 }
 
 float cube(float a){                //For Cube
-    return pow(a, 3);
+    float res = pow(a, 3);
+    return res;
 }
 
 float cube_root(float a){           //For Cube root
-    return cbrt(a);
+    float res = cbrt(a);
+    return res;
 }
 
 float factorial(float a)            //For factorial
@@ -43,57 +51,85 @@ float factorial(float a)            //For factorial
     return fact; 
 }
 
-float Operations(float *a, float *b, int *choice)    //Have passed Swicth to the fucntion operations of all operations/calculations.
-{
-
-    switch(*choice)
-    {
-        case 0: return add(*a, *b); break;          //func calling of add so on....
-        case 1: return sub(*a, *b); break;       
-        case 2: return mul(*a, *b); break;
-        case 3: return div(*a, *b); break;
-        case 4: return square(*a);  break;
-        case 5: return square_root(*a); break;
-        case 6: return cube(*a);    break;
-        case 7: return cube_root(*a); break;
-        case 8: return factorial(*a); break;
-    }
-}
 
 int main()
 {
 
-    float a, b, result = 0; int choice; char sec_ops;
+    float a, b, ans = 0; char choice;
     printf("Enter The Number: ");
     scanf("%f", &a);
-    printf("Enter  the number of selected the operation: \n 0: Addition(+) \n 1: Subtraction(-) \n 2: Multiply(*) \n 3: Division(/) \n 4: Square \n 5: Square root \n 6: Cube \n 7: Cube root \n 8: Factorial \n");
+
+    printf("Enter the number of selected the operation: \n +: Addition \n - : Subtraction\n *: Multiply \n /: Division\n S: Square \n R: Square root \n C: Cube \n Q: Cube root \n !: Factorial \n");
     scanf("%d", &choice);
 
-    if(choice<0 || choice>8){
-        printf("\nYou have Entered an invalid operation. Enter the valid one: \n");
-        scanf("%d", &choice);
-        }
-
-    if(choice<4 && choice>=0)           //For choices/calculations which need 2nd digit to execute
-        {
-            printf("Enter The Second Number: ");
-            scanf("%f", &b);
-        }
-
-    result = Operations(&a, &b, &choice);
-
-        printf("Result is : %.2f\n", result);
-
-    
-    printf("Enter y to proceed calculation with result -> %.2f", result);
-    scanf(" %c", &sec_ops);
-
-    if(sec_ops == 'y' || sec_ops == 'Y')
+    while(choice!=0)
     {
-        scanf("%d", &choice);
-        Operations(&a, &b, &choice);
+        switch(choice)
+            {
+                case '+': 
+                        float b;
+                        printf("Enter Second Number: ");
+                        scanf("%f", &b);  
+                        ans = add(a, b); break;                  //func calling of add so on....
+                case '-': 
+                        
+                        printf("Enter Second Number: ");
+                        scanf("%f", &b);  
+                        ans = sub(a, b); break;       
+                case '*':  
+                        
+                        printf("Enter Second Number: ");
+                        scanf("%f", &b);  
+                        ans = mul(a, b); break;
+                case '/': 
+                        
+                        printf("Enter Second Number: ");
+                        scanf("%f", &b);  
+                        ans = div(a, b); break;
 
+                case 'S': 
+                        ans = square(a);
+                        break;
+                case 'R': 
+                        ans = square_root(a); 
+                        break;
+                case 'C': 
+                        ans = cube(a);    
+                        break;
+                case 'Q': 
+                        ans = cube_root(a); 
+                        break;
+                case '!': 
+                        ans = factorial(a); 
+                        break;
+            }
+        a = ans;
     }
-    
-    return 0;
+
 }
+
+//Stucked from here......
+
+/*
+float ans = 0;
+int n1 = [input by user]
+
+while (operator != '0'){
+    char operator = [input by user - + * /];
+
+    switch ( operator ){
+       case '+':
+           int n2 = [input by user]
+           ans = add(n1, n2)
+           break;
+       case '-':
+           int n2 = [input by user]
+           ans = sub(n1, n2);
+          break;
+      default:
+          printf("Enter valid operation");
+   }
+
+   n1 = ans;
+}*/
+

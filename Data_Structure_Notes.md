@@ -110,3 +110,45 @@ Memory visualization of C Memory Layout:
        ptr = realloc(ptr, 0);
 
 
+Linked List: A linear Data Structure, each element called node And each node contains Data and Pointer that contains the address of Next node and so on...(Imagine there is is a series of boxes(Nodes) which all are locked and each box has two different parts first part has some goods(Data) and second part has key of Second Box(Pointer which has address of next Node) and and then Second Box's second part has key of Third and so on. But we need key(Address) of first box(Node) i.e START/HEAD pointer)
+
+1. if START = NULL simply LL is empty
+
+struct node
+{
+    int data;   //Data of node
+    struct node *Link;      
+    //Link is pointer which will have the address of Next node 
+};
+
+strcut node *START;
+//START is a pointer to struct node i.e it has address of first node 
+
+Representation:
+
+Start --> [1000]
+            |
+            v
++--------+--------+       +--------+--------+       +--------+--------+       +--------+--------+
+| Data: 8| Link:1000| --> | Data: 6| Link:1100| --> | Data: 4| Link:1200| --> | Data: 2| Link:NULL|
++--------+--------+       +--------+--------+       +--------+--------+       +--------+--------+
+   ^                       ^                          ^                         ^
+   |                       |                          |                         |
+ Address:              Address:                    Address:                    Address:
+  1000                  1050                         1100                       1200
+
+To access thr members of strcuture/node
+(*START).data       //  To access the data
+(*START).Link       //To access the address, we're getting address of first node i.e 1000
+
+To get directly vaue/Data from pointer
+START -> data
+START -> Link       //Address of second note means pointer is pointing to second node as START simply contaned address if First node
+START -> Link -> Link   //Pointer is pointing to the 3rd node 
+
+struct node *ptr;   // Created pointer
+ptr = START;         // ptr get the address of first node that START HAD pointing though
+ptr = ptr -> Link    //Assigned the address to the ptr of link which was pointed by ptr
+
+
+

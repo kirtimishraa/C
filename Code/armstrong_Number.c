@@ -6,7 +6,7 @@ int main(){
     scanf("%d", &N);
 
     NC=N;
-    while(NC!=0){
+    while(NC!=0){   
         digits=digits+1; 
         NC=NC/10;
     }

@@ -535,7 +535,9 @@ May or may not contain argument And may and may not Return valye
 Declaration: Compliler: 
 1. Name 2. Parameter List 3. return type
 
-Syntax: return_Dtype Name_of_func(parameter_list);
+Syntax: return_Dtype func_name(parameter_list); 	//Function defination
+		func_name(parameter_list);					//Fucntion call inside main(){}
+		
 
 1. By default return type is "int"
 2. Parameter list Dtype and No. of arguments
