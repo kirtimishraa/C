@@ -51,7 +51,6 @@ float factorial(float a)            //For factorial
     return fact; 
 }
 
-
 int main()
 {
 
