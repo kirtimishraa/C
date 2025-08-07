@@ -1,2 +1,2 @@
 # C
-C Learning
+C Practice codes | Notes
